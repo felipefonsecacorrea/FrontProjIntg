@@ -90,6 +90,31 @@ h1{
     margin-bottom: 3%;
 }
 
+.divSobre{
+    width: 70%;
+    margin-bottom: 6%;
+}
+
+h2{
+    color: #4d4d4d;
+}
+
+.divSobre h2{
+    margin-bottom: 2%;
+}
+
+.divSobre p{
+    margin-bottom: 1%;
+    text-align: justify;
+}
+
+#LocSobre{
+    margin-top: 8px;
+    width: 75%;
+    border-radius: 5px;
+    margin-bottom: 4%;
+    box-shadow: 1px 5px 15px #000000;
+}
 
 
 #SecNavegacao2{
