@@ -117,3 +117,55 @@ footer{
 footer p {
     color: #7a7a7a;
 }
+
+/* Container do dropdown de login */
+.login-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos do conteúdo do dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 400px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Posiciona o dropdown logo abaixo do botão */
+    right: 0;
+    border-radius: 5px;
+    margin-top: 15%;
+}
+
+.dropdown-content form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.dropdown-content form input[type="text"],
+.dropdown-content form input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.dropdown-content form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Mostra o dropdown quando a classe "show" é adicionada */
+.show {
+    display: block;
+}
