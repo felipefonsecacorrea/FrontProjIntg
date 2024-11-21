@@ -25,11 +25,6 @@
 
         <section id="secConteudoMain">
             <div class="login-container">
-                <div id="userGreeting" style="display: none;">
-                    <p>Bem-vindo, <span id="userName"></span>!</p>
-                    <button id="btnLogout" onclick="logout()">Logout</button>
-                </div>
-                <a id="btnLogin" href="#">Login</a>
                 <div id="loginDropdown" class="dropdown-content">
                     <form onsubmit="loginUsuario(event)">
                         <label for="email">Email:</label>
@@ -41,6 +36,12 @@
                         <button type="submit">Entrar</button>
                     </form>
                 </div>
+
+                <div id="userGreeting" style="display: none;">
+                    <p>Bem-vindo, <span id="userName"></span>!</p>
+                    <button id="btnLogout" onclick="logout()">Logout</button>
+                </div>
+                <a id="btnLogin" href="#">Login</a>
             </div>
         </section>
 
@@ -96,6 +97,7 @@
                     document.getElementById('userGreeting').style.display = 'block'; // Exibe a mensagem de boas-vindas
                     localStorage.setItem('user_id', resultado.usuario.id); // Armazena o ID do usuário no Local Storage
                     loginDropdown.classList.remove("show"); // Fecha o dropdown após o login
+                    document.getElementById('btnLogin').style.display = 'none';
                 } else {
                     alert(resultado.mensagem); // Exibe mensagem de erro
                 }
@@ -110,6 +112,7 @@
             localStorage.removeItem('user_id'); // Remove o ID do usuário do Local Storage
             document.getElementById('userGreeting').style.display = 'none'; // Esconde a saudação
             alert('Você saiu com sucesso!'); // Exibe mensagem de logout
+            document.getElementById('btnLogin').style.display = '';
         }
 
         // Verificar se o usuário está logado ao carregar a página
