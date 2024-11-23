@@ -24,7 +24,7 @@
         </div>
 
         <section id="secConteudoMain">
-            <div class="login-container">
+            <div id='login-container' class="login-container">
                 <div id="loginDropdown" class="dropdown-content">
                     <form onsubmit="loginUsuario(event)">
                         <label for="email">Email:</label>
@@ -43,6 +43,9 @@
                 </div>
                 <a id="btnLogin" href="#">Login</a>
             </div>
+
+            <iframe id="dashstreamlit" src="http://localhost:8501" width="100%" height="800" frameborder="0" style="display: none;"></iframe>
+            
         </section>
 
         <section id="SecNavegacao2"></section>
@@ -98,6 +101,8 @@
                     localStorage.setItem('user_id', resultado.usuario.id); // Armazena o ID do usuário no Local Storage
                     loginDropdown.classList.remove("show"); // Fecha o dropdown após o login
                     document.getElementById('btnLogin').style.display = 'none';
+                    document.getElementById('dashstreamlit').style.display = "";
+                    
                 } else {
                     alert(resultado.mensagem); // Exibe mensagem de erro
                 }
@@ -113,6 +118,8 @@
             document.getElementById('userGreeting').style.display = 'none'; // Esconde a saudação
             alert('Você saiu com sucesso!'); // Exibe mensagem de logout
             document.getElementById('btnLogin').style.display = '';
+            document.getElementById('dashstreamlit').style.display = "none";
+            
         }
 
         // Verificar se o usuário está logado ao carregar a página

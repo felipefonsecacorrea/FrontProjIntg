@@ -48,6 +48,20 @@ header{
     text-justify: auto;
 }
 
+#btnLogout{
+    margin-right: 3%;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: larger ;
+    font-weight: 600;
+    color: #228B22;
+    border: #228B22 solid 1px;
+    text-align: center;
+    border-radius: 4px;
+    text-justify: auto;
+    background-color: #fff;
+}
+
 #tituloPag{
     width: 100%;
     display: flex;
@@ -77,20 +91,17 @@ h1{
     text-transform: uppercase;
 }
 
-
 #secConteudoMain{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 90%;
-    padding-top: 5%;
+    padding-top: 3%;
     border: 1px #bbbbbb solid;
     border-radius: 5px;
     background-color: #fff;
     margin-bottom: 3%;
 }
-
-
 
 #SecNavegacao2{
     height: 5vh;
@@ -119,9 +130,10 @@ footer p {
 }
 
 /* Container do dropdown de login */
-.login-container {
+#login-container {
     position: relative;
     display: inline-block;
+    margin-bottom: 3%;
 }
 
 /* Estilos do conteúdo do dropdown */
@@ -169,5 +181,3 @@ footer p {
 .show {
     display: block;
 }
-
-

@@ -1,6 +1,10 @@
+#API para Longin
+
 from flask import Flask, request, jsonify
 import mysql.connector
-from flask_cors import CORS  # Importando o CORS
+from flask_cors import CORS
+
+from dash import mainPy  # Importando o CORS
 
 app = Flask(__name__)
 CORS(app)  # Habilitar CORS
@@ -41,3 +45,4 @@ def verificar_usuario():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    mainPy()
